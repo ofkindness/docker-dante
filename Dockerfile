@@ -30,4 +30,4 @@ COPY sockd.conf /etc/
 
 EXPOSE 1080
 
-CMD ["sockd", "-D"]
+CMD ["sockd", "-N", "8"]
