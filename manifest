@@ -1,0 +1,5 @@
+# maintainer: Andrei Tretyakov <andrei.tretyakov@gmail.com> (@ofkindness)
+
+1.4.2: git://github.com/ofkindness/docker-dante/blob/master/1.4.2/Dockerfile 1.4
+1.4: git://github.com/ofkindness/docker-dante/blob/master/1.4.2/Dockerfile 1.4
+latest: git://github.com/ofkindness/docker-dante/blob/master/1.4.2/Dockerfile 1.4
