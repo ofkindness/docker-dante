@@ -4,7 +4,7 @@ MAINTAINER Andrei Tretyakov <andrei.tretyakov@gmail.com>
 
 ENV DANTE_VERSION 1.4.2
 
-RUN apk add --no-cache make gcc g++ curl
+RUN apk add --no-cache curl gcc g++ make
 
 RUN mkdir -p /usr/src
 
