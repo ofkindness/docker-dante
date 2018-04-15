@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:3.7 AS builder
 
 MAINTAINER Andrei Tretyakov <andrei.tretyakov@gmail.com>
 
@@ -25,6 +25,10 @@ RUN cd /usr/src/dante-$DANTE_VERSION \
     --without-upnp \
     --without-pam \
     && make && make install
+
+FROM alpine:3.7
+
+COPY --from=builder /usr/sbin/sockd  /usr/sbin/
 
 COPY sockd.conf /etc/
 
