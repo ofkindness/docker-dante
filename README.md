@@ -3,6 +3,8 @@ Supported tags and respective `Dockerfile` links
 
 -	`1.4.2`, `1.4`, `latest`: [Dockerfile](https://github.com/ofkindness/docker-dante/tree/master/1.4.2/Dockerfile)
 
+-	`1.4.2-telegram`, `1.4-telegram`, `latest-telegram`: [Dockerfile](https://github.com/ofkindness/docker-dante/tree/master/1.4.2/telegram/Dockerfile)
+
 For more information about this image and its history, please see [the relevant manifest `docker-dante/manifest` file](https://github.com/ofkindness/docker-dante/tree/master/manifest).
 
 What is Dante?
