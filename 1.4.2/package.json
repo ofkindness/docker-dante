@@ -1,0 +1,26 @@
+{
+  "name": "docker-dante",
+  "version": "1.4.2",
+  "description": "A free SOCKS server Dante Docker image with generic config support",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofkindness/docker-dante.git"
+  },
+  "keywords": [
+    "Docker",
+    "Danter"
+  ],
+  "author": "Andrei Tretyakov <andrei.tretyakov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ofkindness/docker-dante/issues"
+  },
+  "homepage": "https://github.com/ofkindness/docker-dante#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1"
+  }
+}
