@@ -14,6 +14,7 @@ RUN cd /usr/src \
 
 RUN cd /usr/src/dante-$DANTE_VERSION \
     && ac_cv_func_sched_setscheduler=no ./configure \
+    --build=unknown-unknown-linux \
     --prefix=/usr \
     --sysconfdir=/etc \
     --localstatedir=/var \
@@ -26,9 +27,7 @@ RUN cd /usr/src/dante-$DANTE_VERSION \
     --without-pam \
     && make && make install
 
-FROM 16-alpine
-
-ENV DANTE_VERSION 1.4.2
+FROM node:16-alpine
 
 RUN mkdir -p /usr/src/dante \
     && apk add --no-cache nodejs nodejs-npm
