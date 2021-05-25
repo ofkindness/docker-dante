@@ -1,6 +1,6 @@
-FROM alpine:3.7 AS builder
+FROM alpine:3.13 AS builder
 
-MAINTAINER Andrei Tretyakov <andrei.tretyakov@gmail.com>
+LABEL maintainer="Andrei Tretyakov <andrei.tretyakov@gmail.com>"
 
 ENV DANTE_VERSION 1.4.2
 
@@ -26,7 +26,7 @@ RUN cd /usr/src/dante-$DANTE_VERSION \
     --without-pam \
     && make && make install
 
-FROM alpine:3.7
+FROM 16-alpine
 
 ENV DANTE_VERSION 1.4.2
 

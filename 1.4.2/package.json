@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/ofkindness/docker-dante#readme",
   "dependencies": {
-    "dotenv": "^5.0.1"
+    "dotenv": "^10.0.0"
   }
 }
