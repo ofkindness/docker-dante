@@ -30,7 +30,7 @@ RUN cd /usr/src/dante-$DANTE_VERSION \
 FROM node:16-alpine
 
 RUN mkdir -p /usr/src/dante \
-    && apk add --no-cache nodejs nodejs-npm
+    && apk add --no-cache nodejs nodejs-npm pwgen
 
 COPY --from=builder /usr/sbin/sockd  /usr/sbin/
 
