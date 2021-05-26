@@ -1,6 +1,6 @@
-FROM alpine:3.7 AS builder
+FROM alpine:3.13 AS builder
 
-MAINTAINER Andrei Tretyakov <andrei.tretyakov@gmail.com>
+LABEL maintainer="Andrei Tretyakov <andrei.tretyakov@gmail.com>"
 
 ENV DANTE_VERSION 1.4.2
 
@@ -14,6 +14,7 @@ RUN cd /usr/src \
 
 RUN cd /usr/src/dante-$DANTE_VERSION \
     && ac_cv_func_sched_setscheduler=no ./configure \
+    --build=unknown-unknown-linux \
     --prefix=/usr \
     --sysconfdir=/etc \
     --localstatedir=/var \
@@ -26,12 +27,10 @@ RUN cd /usr/src/dante-$DANTE_VERSION \
     --without-pam \
     && make && make install
 
-FROM alpine:3.7
-
-ENV DANTE_VERSION 1.4.2
+FROM node:16-alpine
 
 RUN mkdir -p /usr/src/dante \
-    && apk add --no-cache nodejs nodejs-npm
+    && apk add --no-cache nodejs nodejs-npm pwgen
 
 COPY --from=builder /usr/sbin/sockd  /usr/sbin/
 

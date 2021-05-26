@@ -1,7 +1,11 @@
-require('dotenv').load({ silent: true });
+const { config } = require('dotenv');
 
-console.log(
-`debug: ${process.env.debug || 0}
+config();
+
+console.log(`debug: ${process.env.debug || 0}
+
+errorlog: /var/log/sockd.error.log
+logoutput: /var/log/sockd.log
 
 internal: ${process.env.internal || '0.0.0.0'}  port = ${process.env.port || '1080'}
 external: ${process.env.external || 'eth0'}
@@ -22,5 +26,4 @@ socks pass {
     log: error
     protocol: tcp udp
     socksmethod: ${process.env.socksmethod || 'username'}
-}`
-);
+}`);
