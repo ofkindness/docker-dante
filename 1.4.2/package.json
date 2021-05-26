@@ -12,7 +12,8 @@
   },
   "keywords": [
     "Docker",
-    "Danter"
+    "Dante",
+    "socks5"
   ],
   "author": "Andrei Tretyakov <andrei.tretyakov@gmail.com>",
   "license": "MIT",
