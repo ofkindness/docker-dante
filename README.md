@@ -1,7 +1,7 @@
 Supported tags and respective `Dockerfile` links
 ================================================
 
--	`1.4.2`, `1.4`, `latest`: [Dockerfile](https://github.com/ofkindness/docker-dante/tree/master/1.4.2/Dockerfile)
+-	`1.4.3`, `1.4.2`, `1.4`, `latest`: [Dockerfile](https://github.com/ofkindness/docker-dante/tree/master/1.4.3/Dockerfile)
 
 For more information about this image and its history, please see [the relevant manifest `docker-dante/manifest` file](https://github.com/ofkindness/docker-dante/tree/master/manifest).
 
@@ -14,7 +14,13 @@ How to use this image
 =====================
 
 ```console
-$ docker run -d --name some-socks-server -p 127.0.0.1:1080:1080 kafka/dante
+$ docker run -d --name socks-server -p 127.0.0.1:1080:1080 kafka/dante
+```
+
+Obtain a password for user `dante` to authorise:
+
+```console
+$ docker logs socks-server
 ```
 
 Information about Dante
